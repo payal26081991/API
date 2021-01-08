@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Common.Report.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="API Tests(failed)">
+    <classes>
+      <class name="Tests.LinearAPITests.Https">
+        <methods>
+          <include name="Https" invocation-numbers="0 1 3 6 17 21 24 25 27 42 50 64"/>
+          <include name="before"/>
+          <include name="beforeTestCase"/>
+        </methods>
+      </class> <!-- Tests.LinearAPITests.Https -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

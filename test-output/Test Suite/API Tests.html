@@ -1,0 +1,793 @@
+<html>
+<head>
+<title>TestNG:  API Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>56/12/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Sep 18 22:22:21 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>25 seconds (25229 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/schedulegrid/v3?apikey=40f13eedbc864a4d654350d791cddb9332dc7626&channellist=star plus&responseformat=json&responselanguage=telugu&logotype=Dark&fromdatetime=202008182300&todatetime=202008192300&context=headendid=2645;applicationname=Standard;channelimagewidth=360;channelimageheight=270;programmeimagewidth=360;programmeimageheight=270;includeprevdayspillover=true;outdatetimeformat=s;forcechannelmetadatafiltering=false;sortfield=channeldisplayname&userid=0</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1684541910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1684541910'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/schedule?apikey=27e8569fb20a459ab355c4b444fe016763252292&responseformat=json&responselanguage=english&fromdatetime=202008150000&todatetime=202008152359&context=headendid=2645;applicationname=StandardAPI;outdatetimeformat=s;forcechannelmetadatafiltering=true;includeprevdayspillover=true;channelimagedimension=70x53;programmeimagewidth=660;programmeimageheight=880&channelname=star movies&userid=2897391</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace985655365", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace985655365'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/Programmefulldetailsforapp/v2?apikey=262afba4cd06f167cfea39e5fb7b314f9de8694d&responseformat=json&responselanguage=english&context=applicationname=StarTV;headendid=4232;channelimagedimension=70x53;programmeimagewidth=360;programmeimageheight=270&programmeid=30000000549659987&channelid=10000000000820000&userid=0&starttime=202008082100</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 500 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace102709691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace102709691'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 500 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/Programmefulldetailsforapp/v4?apikey=4a1b77692d9bfed1384512a4fb9c3d00b3d57f2b&responseformat=json&responselanguage=English&context=headendid=2645;programmeimagedimension=xxlarge;channelimagedimension=medium;utcoffsetinmin=330;programmeimagewidth=360;programmeimageheight=270&programmeid=30000000550672320</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 403 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace180353207", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180353207'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 403 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/schedulegrid?apikey=40f13eedbc864a4d654350d791cddb9332dc7626&channellist=star plus&responseformat=json&responselanguage=telugu&logotype=Dark&fromdatetime=202008182300&todatetime=202008192300&context=headendid=2645;applicationname=Standard;channelimagewidth=360;channelimageheight=270;programmeimagewidth=360;programmeimageheight=270;includeprevdayspillover=true;outdatetimeformat=s;forcechannelmetadatafiltering=false;sortfield=channeldisplayname&userid=0</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace711483066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace711483066'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammesWithAdditionalInfo?apikey=bd1be4f71a543a9e1dae235ce98ff9494f2ff369&responseformat=json&responselanguage=english&pageno=1&context=headendid=2054;utcoffsetinmin=0;includerecommended=true;applicationname=CCNDEN;hasgenericimage=false;includevideos=true;includewatchlist=true;programmeimagedimension=xlarge&%20channelimagedimension=small&channelname=&genre=&subgenre=&language=&cast=&director=&headendcolumnlist=lcn,channelid,channeldisplayname&,channelid,channeldisplayname&fromdatetime=202008130726&enddatetime=202008142359&userid=4510</td>
+<td><div><pre>java.lang.AssertionError: videourl mismatch
+	at Tests.LinearAPITests.Https.Https(Https.java:123)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace213683471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace213683471'><pre>java.lang.AssertionError: videourl mismatch
+	at org.testng.Assert.fail(Assert.java:96)
+	at Tests.LinearAPITests.Https.Https(Https.java:123)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/schedulegrid/v2?apikey=40f13eedbc864a4d654350d791cddb9332dc7626&channellist=star plus&responseformat=json&responselanguage=telugu&logotype=Dark&fromdatetime=202008182300&todatetime=202008192300&context=headendid=2645;applicationname=Standard;channelimagewidth=360;channelimageheight=270;programmeimagewidth=360;programmeimageheight=270;includeprevdayspillover=true;outdatetimeformat=s;forcechannelmetadatafiltering=false;sortfield=channeldisplayname&userid=0</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1730129134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1730129134'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/schedulegrid/V4?apikey=a9412422c11252f60268edc332c9efaf8a40f6e7&channellist=Star Movies, Star Sports 1&responseformat=json&responselanguage=english&fromdatetime=202008171200&todatetime=202008171500&context=headendid=9641;applicationname=Standard;includeprevdayspillover=true;outdatetimeformat=s</td>
+<td><div><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace551797833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace551797833'><pre>java.lang.AssertionError: Response Code is not as expected! Expected: 200, Actual: 400 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Tests.LinearAPITests.Https.Https(Https.java:61)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/UserFavouriteChannelsNowNext?apikey=19a448c01aa2e7d55979473b647e282459995b85&responseformat=json&responselanguage=english&pageno=1&context=applicationname=iphoneapp;webp=true;sortfield=lcn;headendid=1074;channelimagedimension=large;headendtype=DTH&userid=1051030</td>
+<td><div><pre>java.lang.AssertionError: programmeurl mismatch
+	at Tests.LinearAPITests.Https.Https(Https.java:89)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2071364564", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2071364564'><pre>java.lang.AssertionError: programmeurl mismatch
+	at org.testng.Assert.fail(Assert.java:96)
+	at Tests.LinearAPITests.Https.Https(Https.java:89)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/Operator/Operator.svc/DiscoverForApps?apikey=e7f90ea91bf8ef674b249ec794980fe1e4e1ca10&responseformat=json&responselanguage=english&context=applicationname=UCNWebSite;headendid=699;programmeimagewidth=400;programmeimageheight=300;channelimagedimension=70x53;pagesize=12;hasgenericimage=false&pageno=1&userid=0</td>
+<td><div><pre>java.lang.AssertionError: videourl mismatch
+	at Tests.LinearAPITests.Https.Https(Https.java:123)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace705062537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace705062537'><pre>java.lang.AssertionError: videourl mismatch
+	at org.testng.Assert.fail(Assert.java:96)
+	at Tests.LinearAPITests.Https.Https(Https.java:123)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>3</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/UserStar/UserStarHost.svc/TVGuideForSunDirect_ChannelGenreFilter?apikey=56cfa95a090e34f485359a055dfc3bb8b6a9c820&responseformat=json&responselanguage=english&context=headendid=2333;applicationname=InCable&programmeimagesize=small&channelimagesize=small&date=0&userid=196878&starthour=14&channelgenre=Kids</td>
+<td><div><pre>java.lang.AssertionError: imagefilepath mismatch
+	at Tests.LinearAPITests.Https.Https(Https.java:112)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1609038183", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1609038183'><pre>java.lang.AssertionError: imagefilepath mismatch
+	at org.testng.Assert.fail(Assert.java:96)
+	at Tests.LinearAPITests.Https.Https(Https.java:112)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/Operator/Operator.svc/channelbydisplayname/v2?apikey=d6385a5e54213bf645222ecd6b74244e0db3e995&responseformat=json&responselanguage=english&channeldisplayname=colors&context=headendid=2645;applicationname=Test;channelimagewidth=360&logotype=transparent</td>
+<td><div><pre>java.lang.AssertionError: channellogourl mismatch
+	at Tests.LinearAPITests.Https.Https(Https.java:166)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace934223763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace934223763'><pre>java.lang.AssertionError: channellogourl mismatch
+	at org.testng.Assert.fail(Assert.java:96)
+	at Tests.LinearAPITests.Https.Https(Https.java:166)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></div></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/Operator/Operator.svc/channelbydisplayname?apikey=d6385a5e54213bf645222ecd6b74244e0db3e995&responseformat=json&responselanguage=english&context=headendid=2645;applicationname=Test;channelimagewidth=360;channelimageheight=270&channeldisplayname=colors&logotype=transparent</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/NowNextChannel?apikey=f47aea8bdcbd1179a1f3d91e6afeeb259488f2d1&channellist=MH1,Zee Punjab Haryana Himachal,PTC News,PTC Punjabi,PTC Chakde,9X Tashan,Chardikla Time TV,India News Punjab,Manoranjan Movies,Pitaara,DD Punjabi&context=headendid=1075;applicationname=androidapp;programmeimagedimension=big;channelimagedimension=larg;sortfield=lcn&pageno=1&responseformat=json&responselanguage=english&userid=3234056</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammes?apikey=224b4abdea2bf26fdd64a13e71029cf0d37606ac&responseformat=json&responselanguage=english&pageno=1&headendcolumnlist=lcn,channelid&context=headendid=9641;applicationname=standard;outdatetimeformat=s;sortfield=starttime;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160;pagesize=20&fromdatetime=201805170000&enddatetime=201805170100&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/channel/v3?apikey=ffb4ad28cfc1d2fec2591aef120bfab99dd35307&responseformat=JSON&responselanguage=english&channelname=all&context=headendid=11093;applicationname=VianeosCommercialDistribution;channelimagewidth=360;channelimageheight=270&channelgenre=&channellanguage=English&logotype=transparent</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammes/v3?apikey=224b4abdea2bf26fdd64a13e71029cf0d37606ac&responseformat=json&responselanguage=english&pageno=1&headendcolumnlist=lcn,channelid&context=headendid=9641;applicationname=standard;outdatetimeformat=s;sortfield=starttime;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160;pagesize=20&fromdatetime=201805170000&enddatetime=201805170100&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Programmefulldetailsforapp/v2?apikey=d4bcf1aece9d1aa3dda31b19fef7dc0a1e56c461&responseformat=json&responselanguage=English&context=applicationname=Standard;headendid=9641;channelimagewidth=3840;channelimageheight=2160;programmeimagewidth=270;programmeimageheight=360;outdatetimeformat=s&programmeid=30000000549640140&channelid=10000000000570000&userid=1162199&starttime=202007022130&logotype=Dark&backgroundimagewidth=360&backgroundimageheight=270</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/Programmefulldetailsforapp?apikey=4a1b77692d9bfed1384512a4fb9c3d00b3d57f2b&responseformat=json&responselanguage=English&context=headendid=2645;applicationname=test;programmeimagedimension=xxlarge;channelimagedimension=medium;utcoffsetinmin=330;programmeimagewidth=360;programmeimageheight=270&programmeid=30000000550672320</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammes/v2?apikey=224b4abdea2bf26fdd64a13e71029cf0d37606ac&responseformat=json&responselanguage=english&pageno=1&headendcolumnlist=lcn,channelid&context=headendid=9641;applicationname=standard;outdatetimeformat=s;sortfield=starttime;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160;pagesize=20&fromdatetime=201805170000&enddatetime=201805170100&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Search?apikey=cbda9f946aa6531135c22ec57f311100d1ae6702&responseformat=json&responselanguage=english&pageno=1&context=programmeimagedimension=xlarge;channelimagedimension=medium;applicationname=StarTV;headendid=4232&searchvalue=Formula&searchcriteria=&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/SearchProgram_LanguageFiltration?apikey=b0e9220e1d729358994ea89542fa505ad4467470&responseformat=json&responselanguage=english&pageno=1&SearchText=UTV+action&SearchCategory=FREETEXTSEARCH&SearchSortField=RELATIVE&SearchSortOrder=asc&userid=5159135&context=outdatetimeformat=s;applicationname=androidapp;sortfield=channeldisplayname;headendid=0;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=70x53;enablesearchfallback=true&filteredlanguages=</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/scheduleforchannellist?apikey=8621c903d2df1cadab84f4f958df7b53e6011f17&responseformat=json&responselanguage=english&context=headendid=403;applicationname=hathway;outdatetimeformat=yyyyMMddHHmm&userid=0&fromdatetime=202008120000&todatetime=202008122359&channellist=STAR PLUS,Zee TV,Star Bharat,Colors,SET,Sony SAB,And TV,Naaptol,Dangal,BIG MAGIC</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/UserRecommendedChannelsNowNext?apikey=745b713580e90e3eed014594fdd55124a250d868&responseformat=json&responselanguage=English&pageno=1&toprecommendedchannels=0&context=applicationname=android app;sortfield=channeldisplayname;headendid=0;channelimagedimension=70x53;headendtype=;IsLiveTV=true;programmeimagedimension=small&userid=5145527&includefavoritechannel=true&includerecommendedchannel=false&includeReminder=true</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/channel/v2?apikey=ffb4ad28cfc1d2fec2591aef120bfab99dd35307&responseformat=JSON&responselanguage=english&channelname=all&context=headendid=11093;applicationname=VianeosCommercialDistribution;channelimagewidth=360;channelimageheight=270&channelgenre=&channellanguage=English&logotype=transparent</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/UserFavouriteProgramme/v3?apikey=bec6514b2367282ddc34cad353edd769f1dfd413&responseformat=json&responselanguage=english&pageno=1&context=applicationname=androidapp;outdatetimeformat=s;sortfield=channeldisplayname;headendid=0;channelimagedimension=70x53;programmeimagedimension=mediumsquare&userid=5156293</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/SearchChannel?apikey=247317edd2fbed736ea0c9d3ea37d66a738ad34a&responseformat=json&responselanguage=english&pageno=1&context=headendid=403;applicationname=hathway;channelimagedimension=medium&SearchText=Children&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/ProgrammesByHybridGenreForHeadEnd_languagefiltration/v2?apikey=086e894abe76b5dfda9ebd50da351e1d31d29c97&responseformat=json&responselanguage=english&pageno=1&userid=5154404&hybridgenre=Sports&context=applicationname=iphoneapp;webp=true;sortfield=starttime;outdatetimeformat=s;opid=;headendid=1074;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=132x99&languagesfiltered=English,Hindi&fromDateTime=202008180930&toDateTime=202008182359</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/NextSchedule?apikey=732217de58820ef4dc0353a910df674a58084629&responseformat=json&responselanguage=english&context=applicationname=standard;headendid=9641;outdatetimeformat=s;channelimagewidth=3840;channelimageheight=2160;programmeimagewidth=270;programmeimageheight=360&programmeid=30000000549640140&channelid=10000000000080000&userid=1995244&fromdate=201904260000&enddate=201904262359&pagesize=10&pageno=1&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/NowNextForHeadend_FilteredLanguage?apikey=02e0a51e74de584591fb1037b10bada5a4053b1e&responseformat=json&responselanguage=english&pageno=1&context=applicationname=iphoneapp;sortfield=lcn;webp=true;headendid=1073;headendtype=DTH;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=132x99&filteredlanguages=English,Hindi,Marathi</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/SimilarChannelsWithNowNext?apikey=60f776c1a235a3c3e62543c3793c36d6cc511db9&responseformat=json&responselanguage=English&pageno=1&channelid=10000000025050000&userid=5160764&havingsamegenre=true&context=applicationname=androidapp;sortfield=lcn;headendid=1077;msisdn=0;custid=0;sort=false;programmeimagedimension=xlarge;channelimagedimension=medium</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/WatchListProgrammesUsingCF/V2?apikey=61b5df41f1006a3d0ead4e4e6a6a61cb32496959&responseformat=json&responselanguage=english&pageno=1&context=outdatetimeformat=s;applicationname=androidapp;sortfield=lcn;headendid=1071;channelimagedimension=70x53;programmeimagedimension=square;headendid=1071&userid=2809365&daytype=all</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/TSM/TSMHost.svc/ChannelGenreForOperatorFromTSM?apikey=c5063b380b7f2b5dc3bafe6c2af8dd40fc5832ad&responseformat=json&context=headendid=2558;applicationname=MEGHBELA&responselanguage=english</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/EditorsPick_LanguageFiltration?apikey=390a452ac5b4655b709df89c9d284929225d4e2a&responseformat=json&responselanguage=English&pageno=1&userid=0&languagelist=&context=applicationName=androidapp;outdatetimeformat=s;sortfield=channeldisplayname;headendid=2646;utcoffsetinmin=120;msisdn=0;custid=0;programmeimagedimension=xlarge;channelimagedimension=70x53</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/SearchProgram_LanguageFiltration?apikey=b0e9220e1d729358994ea89542fa505ad4467470&responseformat=json&responselanguage=english&pageno=1&SearchText=UTV+action&SearchCategory=FREETEXTSEARCH&SearchSortField=RELATIVE&SearchSortOrder=asc&userid=5159135&context=outdatetimeformat=s;applicationname=androidapp;sortfield=channeldisplayname;headendid=0;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=70x53;enablesearchfallback=true&filteredlanguages=</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/UserRecommendedChannelsNowNext?apikey=745b713580e90e3eed014594fdd55124a250d868&responseformat=json&responselanguage=English&pageno=1&toprecommendedchannels=0&context=applicationname=androidapp;sortfield=channeldisplayname;headendid=0;channelimagedimension=70x53;headendtype=;programmeimagedimension=small&userid=5156215&includefavoritechannel=true&includerecommendedchannel=false</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/VideocategoryList?apikey=10d293a95915109e7675b011f404213902624f14&responseformat=json&responselanguage=english&pageno=1&context=applicationname=iphoneapp;webp=true;sortfield=channeldisplayname;headendid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/ViewersLikePrg?apikey=f58488d89546773dc573388dc1f754b42b49b026&responseformat=json&responselanguage=English&pageno=1&programmeid=30000000549650672&userid=2548307&languageid=10000000000140000&context=applicationname=androidapp;sortfield=lcn;headendid=2160;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=70x53</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/PremieresAndUpcoming/V2?apikey=9d8974baddfc0e53300829f37e5fc88b0f5ce61b&responseformat=json&responselanguage=English&pageno=1&context=applicationname=androidapp;sortfield=lcn;headendid=823;msisdn=0;custid=0;outdatetimeformat=s;programmeimagedimension=mediumsquare;channelimagedimension=70x53</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/WatchListProgrammesUsingCF?apikey=61b5df41f1006a3d0ead4e4e6a6a61cb32496959&responseformat=json&responselanguage=english&pageno=1&context=outdatetimeformat=s;applicationname=androidapp;sortfield=lcn;headendid=1071;channelimagedimension=70x53;programmeimagedimension=square;headendid=1071&userid=2809365&daytype=all</td>
+<td></td>
+<td>1</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TrendingPrograms?apikey=06349be70bd2d5dd98d36b9b8dba0a057500fdac&responseformat=json&responselanguage=english&pageno=1&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/EditorsPick?apikey=1d7deb7af392ce1dd0b07cc0e31a54ffbcbfe9fc&responseformat=json&responselanguage=english&pageno=1&userid=0&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/scheduleforchannellist?apikey=8621c903d2df1cadab84f4f958df7b53e6011f17&responseformat=json&responselanguage=english&context=headendid=403;applicationname=hathway;outdatetimeformat=yyyyMMddHHmm&fromdatetime=202008180000&todatetime=202008182359&channellist=STAR PLUS,Zee TV,Star Bharat,Colors,SET,Sony SAB,And TV,Naaptol,Dangal,BIG MAGIC&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/TSM/TSMHost.svc/ScheduledChannelsByChannelGenreForHeadend?apikey=fc15481319490c30a42e4dccfca757cc57193312&responseformat=json&responselanguage=english&context=applicationname=AndroidApp;headendid=403;sortfield=lcn;channelimagedimension=70x53&channelgenre=All&userid=2685203</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/UserStar/UserStarHost.svc/TVGuide?apikey=9185ac5453c7c4ef45a8df15bf471dfbbcf628da&responseformat=json&responselanguage=english&pageno=2&context=headendid=2333;applicationname=InCable&programmeimagesize=small&channelimagesize=small&selecteddate=0&starthour=0&userID=196878</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Search/v4?apikey=cbda9f946aa6531135c22ec57f311100d1ae6702&responseformat=json&responselanguage=english&pageno=1&context=programmeimagedimension=xlarge;channelimagedimension=medium;applicationname=StarTV;headendid=4232&searchvalue=Formula&searchcriteria=&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammes/v3?apikey=224b4abdea2bf26fdd64a13e71029cf0d37606ac&responseformat=json&responselanguage=english&pageno=1&headendcolumnlist=lcn,channelid&context=headendid=9641;applicationname=standard;outdatetimeformat=s;sortfield=starttime;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160;pagesize=20&fromdatetime=201805170000&enddatetime=201805170100&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/SearchProgram?apikey=1185401df4fc07ec0f2e42c538ab6b1bb1388264&responseformat=json&responselanguage=english&pageno=1&SearchText=Disney%20channel&SearchCategory=FREETEXTSEARCH&SearchSortField=weight&SearchSortOrder=desc&userid=0&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc//UserFavouriteProgramme?apikey=bec6514b2367282ddc34cad353edd769f1dfd413&responseformat=json&responselanguage=english&pageno=1&context=applicationname=androidapp;outdatetimeformat=s;sortfield=channeldisplayname;headendid=0;channelimagedimension=70x53;programmeimagedimension=mediumsquare&userid=5156293</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc//UserFavouriteProgramme/v2?apikey=bec6514b2367282ddc34cad353edd769f1dfd413&responseformat=json&responselanguage=english&pageno=1&context=applicationname=androidapp;outdatetimeformat=s;sortfield=channeldisplayname;headendid=0;channelimagedimension=70x53;programmeimagedimension=mediumsquare&userid=5156293</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Search/v3?apikey=cbda9f946aa6531135c22ec57f311100d1ae6702&responseformat=json&responselanguage=english&pageno=1&context=programmeimagedimension=xlarge;channelimagedimension=medium;applicationname=StarTV;headendid=4232&searchvalue=Formula&searchcriteria=&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc//MoviesByLanguage?apikey=5f6955d227a320c7f1f6c7da2a6d96a851a8118f&responseformat=json&responselanguage=english&pageno=1&language=Hindi&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/NowNextHour?apikey=ac2646028f5b8b9bbf7a967f4ac71b8866135211&responseformat=json&responselanguage=english&pageno=1&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopProgrammesByDate?apikey=cb4dd52770e258826c4174c36202b18f649e262f&responseformat=json&responselanguage=english&pageno=1&date=20200809&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/channel/v4?apikey=830f5e197f478355fc8a004a02c907acea514b96&responseformat=JSON&responselanguage=english&channelname=all&context=headendid=11097;applicationname=TataElxsi;channelimagewidth=360;channelimageheight=270&logotype=Transparent</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/guideStar/guideStarHost.svc/scheduleforchannellist?apikey=8621c903d2df1cadab84f4f958df7b53e6011f17&responseformat=json&responselanguage=english&context=headendid=403;applicationname=hathway;outdatetimeformat=yyyyMMddHHmm&fromdatetime=202008180000&todatetime=202008182359&channellist=STAR PLUS,Zee TV,Star Bharat,Colors,SET,Sony SAB,And TV,Naaptol,Dangal,BIG MAGIC&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/PremieresAndUpcoming/V2?apikey=9d8974baddfc0e53300829f37e5fc88b0f5ce61b&responseformat=json&responselanguage=English&pageno=1&context=applicationname=androidapp;sortfield=lcn;headendid=823;msisdn=0;custid=0;outdatetimeformat=s;programmeimagedimension=mediumsquare;channelimagedimension=70x53</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/SearchProgram/v3?apikey=13aa97a178fc365ca109ef8746f4b2cfd7f299c2&responseformat=json&responselanguage=english&pageno=1&SearchText=Ye&SearchSortField=relevance&fromdatetime=201804260000&enddatetime=201804282359&context=headendid=9641;applicationname=Standard;pagesize=20;outdatetimeformat=s;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=360;channelimageheight=270&logotype=transparent</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/UserStar/UserStarHost.svc/HybridGenre?apikey=8b2dd04e87577952ed20d966ffb1e252744cdb5f&responseformat=json&responselanguage=english&pageno=1&context=applicationname=androidapp;sortfield=lcn;headendid=3010</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/SearchProgram/v2?apikey=1185401df4fc07ec0f2e42c538ab6b1bb1388264&responseformat=json&responselanguage=english&pageno=1&SearchText=Disney%20channel&SearchCategory=FREETEXTSEARCH&SearchSortField=weight&SearchSortOrder=desc&userid=0&context=applicationname=Win8%20App;opid=;headendid=0;msisdn=0;custid=0;programmeimagedimension=square;channelimagedimension=50x38</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/castcrewdetails?apikey=40b3c4d64de2be7dc65e8772aac42d8509cda4b7&responseformat=json&responselanguage=english&context=headendid=699;applicationname=androidapp&thumbnailsize=70x70&programmeid=30000000550580085</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/ProgrammesByHybridGenreForHeadEnd_languagefiltration?apikey=086e894abe76b5dfda9ebd50da351e1d31d29c97&responseformat=json&responselanguage=english&pageno=1&userid=5154404&hybridgenre=Sports&context=applicationname=iphoneapp;webp=true;sortfield=starttime;outdatetimeformat=s;opid=;headendid=1074;msisdn=0;custid=0;programmeimagedimension=mediumsquare;channelimagedimension=132x99&languagesfiltered=English,Hindi&fromDateTime=202008180930&toDateTime=202008182359</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/nextprogrammesonchannel/v2?apikey=5ea2a167caa5bec58b16800303350173e3dd0946&responseformat=json&responselanguage=english&context=headendid=9641;applicationname=standard;programmeimagewidth=720;programmeimageheight=540;channelimagewidth=3840;channelimageheight=2160;topn=3&logotype=Dark&channelname=Star Movies</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/onnowprogrammes/v2?apikey=400d6f2f655a60900de82d5e9401c16d1df2a4a5&responseformat=json&responselanguage=english&context=headendid=2645;applicationname=Standard;pagesize=20;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160&pageno=1&Cast=salman khan&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Search/v5?apikey=cbda9f946aa6531135c22ec57f311100d1ae6702&responseformat=json&responselanguage=english&pageno=1&context=programmeimagedimension=xlarge;channelimagewidth=360;channelimageheight=270;applicationname=StarTV;headendid=4232&searchvalue=Formula&searchcriteria=&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/TopRatedProgrammes/v4?apikey=224b4abdea2bf26fdd64a13e71029cf0d37606ac&responseformat=json&responselanguage=english&pageno=1&headendcolumnlist=lcn,channelid&context=headendid=9641;applicationname=standard;outdatetimeformat=s;sortfield=starttime;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160;pagesize=20&fromdatetime=201805170000&enddatetime=201805170100&logotype=Dark</td>
+<td></td>
+<td>7</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/recoStar/recoStarHost.svc/onnowprogrammes/v3?apikey=400d6f2f655a60900de82d5e9401c16d1df2a4a5&responseformat=json&responselanguage=english&context=headendid=2645;applicationname=Standard;pagesize=20;programmeimagewidth=360;programmeimageheight=270;channelimagewidth=3840;channelimageheight=2160&pageno=1&Cast=salman khan&logotype=Dark</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+<tr>
+<td title='Tests.LinearAPITests.Https.Https()'><b>Https</b><br>Test class: Tests.LinearAPITests.Https<br>Test method: Validate Https<br>Parameters: https://services.whatsonindia.com/RecoStar/RecoStarHost.svc/Search/v2?apikey=cbda9f946aa6531135c22ec57f311100d1ae6702&responseformat=json&responselanguage=english&pageno=1&context=programmeimagedimension=xlarge;channelimagedimension=medium;applicationname=StarTV;headendid=4232&searchvalue=Formula&searchcriteria=&userid=0</td>
+<td></td>
+<td>0</td>
+<td>Tests.LinearAPITests.Https@4e517165</td></tr>
+</table><p>
+</body>
+</html>

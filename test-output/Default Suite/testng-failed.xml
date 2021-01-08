@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="WOI_API(failed)">
+    <classes>
+      <class name="Tests.VodAPiITests.Program_Detail_API">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="A"/>
+          <include name="before"/>
+          <include name="ProgramDetailResponseValidation" invocation-numbers="0 1"/>
+          <include name="beforeTestCase"/>
+        </methods>
+      </class> <!-- Tests.VodAPiITests.Program_Detail_API -->
+      <class name="Tests.VodAPiITests.Filter_Catalog_API">
+        <methods>
+          <include name="FilterCatalogResponseValidation"/>
+          <include name="beforeTest"/>
+          <include name="F" invocation-numbers="0"/>
+          <include name="before"/>
+          <include name="beforeTestCase"/>
+        </methods>
+      </class> <!-- Tests.VodAPiITests.Filter_Catalog_API -->
+      <class name="Tests.VodAPiITests.InputParameterValidation">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="InputParametersValidation" invocation-numbers="7 10 16 17 21"/>
+          <include name="before"/>
+          <include name="beforeTestCase"/>
+        </methods>
+      </class> <!-- Tests.VodAPiITests.InputParameterValidation -->
+      <class name="Tests.LinearAPITests.Https">
+        <methods>
+          <include name="Https" invocation-numbers="0 1 3 6 17 21 24 25 27 42 50 64"/>
+          <include name="before"/>
+          <include name="beforeTestCase"/>
+        </methods>
+      </class> <!-- Tests.LinearAPITests.Https -->
+    </classes>
+  </test> <!-- WOI_API(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
